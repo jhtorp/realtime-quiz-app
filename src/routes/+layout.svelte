@@ -1,11 +1,9 @@
 <script>
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { ModeWatcher, toggleMode } from 'mode-watcher';
+	import { ModeWatcher } from 'mode-watcher';
+
 	import '../app.css';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Sun from 'lucide-svelte/icons/sun';
-	import Moon from 'lucide-svelte/icons/moon';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import AppSidebar from '$lib/components/app-sidebar.svelte';
 

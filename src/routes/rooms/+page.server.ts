@@ -12,7 +12,6 @@ export const load: PageServerLoad = async (event) => {
 
 		if (gameRoomsError) {
 			console.log(gameRoomsError);
-			return;
 		}
 
 		return gameRoomsData;
@@ -25,7 +24,6 @@ export const load: PageServerLoad = async (event) => {
 
 		if (quizError) {
 			console.log('Error getting quizzes: ', quizError);
-			return null;
 		}
 
 		return quizData;

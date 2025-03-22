@@ -13,13 +13,11 @@
 		<div class="w-full max-w-lg rounded-md border p-8">
 			<h2 class="mb-8 text-xl">Game rooms</h2>
 			<div>
-				{#if gameRooms === undefined}
-					<p>No game rooms found.</p>
+				{#each gameRooms ?? [] as room}
+					<RoomCard roomData={room} joinRoomForm={data.joinRoomForm} />
 				{:else}
-					{#each gameRooms as room}
-						<RoomCard roomData={room} joinRoomForm={data.joinRoomForm} />
-					{/each}
-				{/if}
+					<p>No game rooms found.</p>
+				{/each}
 			</div>
 		</div>
 	</section>
